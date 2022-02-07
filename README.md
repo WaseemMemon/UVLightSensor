@@ -27,6 +27,7 @@ And to start up a docker instance of RabbitMQ, use the following command:
 $ sudo docker run -p 9000:15672 -p 1883:1883 -p 5672:5672 cyrilix/rabbitmq-mqtt
 
 Make an applet on IFTTT to send a notificaton, or a SMS, through Webhooks service After that in nuclio code changing the IP address, the event name and the secret key from IFTTT in the post-Url section and deploy it.You can retrieve your secret key through the webhooks service documentation on IFTTT. 
+In This Project there are two events SMS and Email , When the UV Rays Level are High It will send a warning message to User.
 
 MQTIZER is a mobile MQTT client that can connect to any broker which shares the network with your phone, and to any broker on the cloud as well To show Message on Mobile App download Mobile App MQTIZER than Add the Broker on the app having same Ip as RabbitMQ. Now you will be able to see messages on Mobile Application and for the Web APP Download the Google Chrome extension called "MQTT Lens" add the host ip , username and password subscribe to it then it will show the Messages
 
