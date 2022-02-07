@@ -11,12 +11,12 @@ var argv = require('minimist')(process.argv.slice(2))
 const TOPIC = 'iot/sensor/uvsensor'
 
 if(argv.h || argv._.length === 0){
-    console.log("node logger.js [192.168.43.248]")
+    console.log("node logger.js [ip]")
     process.exit();
 }
 
 let main = async (ip) => {
-	const connection = await amqp.connect('amqp://guest:guest@192.168.43.248:5672');
+	const connection = await amqp.connect('amqp://guest:guest@ip:5672');
 	process.once('SIGINT', () => connection.close());
 
     const channel = await connection.createChannel();
